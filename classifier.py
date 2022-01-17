@@ -1,7 +1,7 @@
 from pandas import read_csv
 from sklearn.tree import DecisionTreeClassifier
 
-competenze = read_csv('../../PycharmProjects/FARIDA/salary.csv')
+competenze = read_csv('salary.csv')
 X = competenze.drop(columns=['salary'])
 y = competenze['salary']
 

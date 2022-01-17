@@ -21,7 +21,7 @@ def helpMain():
           "|--------------------------------------- SEZ.DIPENDENTI --------------------------------------------|\n"
           "|'lista_dipendenti' - mostra le risorse umane dell'azienda e il loro numero                         |\n"
           "|'assumi' - incrementa il numero della figura aziendale in base alla quantita' passata              |\n"
-          "|'licenzia' - decrementa il numero della figura aziendale in base alla quantita' passata        |\n"
+          "|'licenzia' - decrementa il numero della figura aziendale in base alla quantita' passata            |\n"
           "|--------------------------------------- ALTRI COMANDI ---------------------------------------------|\n"
           "|'esempio_query' - mostra un esempio di query possibile                                             |\n"
           "|'query prop(query)' - permette di effettuare una query                                             |\n"

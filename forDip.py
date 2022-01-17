@@ -1,5 +1,4 @@
 from pyswip import Prolog
-import utilities as ut
 
 prolog = Prolog()
 prolog.consult("myKB.pl")

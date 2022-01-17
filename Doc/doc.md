@@ -231,7 +231,7 @@ Rigraziamo per l'attenzione.
 
 <center>
 
-Lo staff, **[FARIDA](inserire url)**
+Lo staff, **[FARIDA](https://github.com/RickNewere/FARIDA.git)**
 
 </center>
 

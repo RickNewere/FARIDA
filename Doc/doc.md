@@ -189,9 +189,9 @@ Ogni risposta è pesata differentemente e queste percentuali sono determinate da
 
 **ESEMPI RETE BAYESIANA**:
 ---
-* P(titoloStudio = laurea) = 0.70;                 
-* P(titoloStudio = diploma) = 0.25;
-* P(titoloStudio = titolo inferiore) = 0.05.
+* P(titoloStudio = laurea) = 0.70                 
+* P(titoloStudio = diploma) = 0.25
+* P(titoloStudio = titolo inferiore) = 0.05
 
 * P(esperienzaPregressa = si) = 0.85
 * P(esperienzaPregressa = no) = 0.15

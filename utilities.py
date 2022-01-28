@@ -27,6 +27,7 @@ def helpMain():
           "|'query prop(query)' - permette di effettuare una query                                             |\n"
           "|'probabilita_assunzione' - prevede la probabilità di essere assunti in base alle proprie capacita' |\n"
           "|'calcola_salario' - prevede l'eventuale stipendio in caso di assunzione                            |\n"
+          "|'accuratezza_classificatore' - calcola l'accuratezza del classificatore                            |\n"
           "|'esci' - esce dal programma                                                                        |\n"
           "|---------------------------------------------------------------------------------------------------|\n")
 

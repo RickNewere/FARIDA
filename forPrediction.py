@@ -14,7 +14,7 @@ titoloDiStudio = BbnNode(Variable(0, 'titolo di studio', ['laurea', 'diploma', '
 esperienzaPregressa = BbnNode(Variable(1, 'esperienza pregressa', ['si', 'no']), [0.85, 0.15])
 #nodo di presentazione principale (1-2)
 valorePersonale = BbnNode(Variable(2, 'valore personale', ['ottimo', 'scarso']),
-                          [0.98, 0.02, 0.75, 0.25, 0.51, 0.49, 0.6, 0.4, 0.15, 0.85, 0.05, 0.95])
+                          [0.98, 0.02, 0.75, 0.25, 0.6, 0.4, 0.51, 0.49, 0.15, 0.85, 0.05, 0.95])
 #l'utente è appassionato?
 passioneInformatica = BbnNode(Variable(3, 'passione informatica', ['si', 'no']), [0.85, 0.15])
 #preferisce programmare front o back end?
@@ -95,60 +95,76 @@ def prediction():
     while True:
         value = input(
             "Indicare il proprio titolo di studio:\n"
-            "Risposte possibili: (laurea) (diploma) (titolo di studio inferiore)\n").lower()
+            "Risposte possibili: (laurea) (diploma) (titolo di studio inferiore) (dato mancante)\n").lower()
         if value in ["laurea", "diploma", "titolo di studio inferiore"]:
             insertDefinedValue(tree, "titolo di studio", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(0)
 
     while True:
         value = input(
             "Indicare se si possiedono esperienze pregresse in aziende informatiche:\n"
-            "Risposte possibili: (si) (no)\n").lower()
+            "Risposte possibili: (si) (no) (dato mancante)\n").lower()
         if value in ["si", "no"]:
             insertDefinedValue(tree, "esperienza pregressa", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(1)
 
     while True:
         value = input("Ti affascina il mondo dell'informatica:\n"
-                      "Risposte possibili: (si) (no)\n").lower()
+                      "Risposte possibili: (si) (no) (dato mancante)\n").lower()
         if value in ["si", "no"]:
             insertDefinedValue(tree, "passione informatica", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(2)
 
     while True:
         value = input("Preferisci:\n"
-                      "Risposte possibili: (back end) (front end)\n").lower()
+                      "Risposte possibili: (back end) (front end) (dato mancante)\n").lower()
         if value in ["back end", "front end"]:
             insertDefinedValue(tree, "sviluppo web", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(3)
 
     while True:
         value = input("Hai conoscenze del linguaggio Java:\n"
-                      "Risposte possibili: (si) (no)\n").lower()
+                      "Risposte possibili: (si) (no) (dato mancante)\n").lower()
         if value in ["si", "no"]:
             insertDefinedValue(tree, "conoscenza Java", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(4)
 
     while True:
         value = input("Hai conoscenze del linguaggio Python:\n"
-                      "Risposte possibili: (si) (no)\n").lower()
+                      "Risposte possibili: (si) (no) (dato mancante)\n").lower()
         if value in ["si", "no"]:
             insertDefinedValue(tree, "conoscenza Python", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(5)
 
     while True:
         value = input("Sai usare MySQL:\n"
-                      "Risposte possibili: (si) (no)\n").lower()
+                      "Risposte possibili: (si) (no) (dato mancante)\n").lower()
         if value in ["si", "no"]:
             insertDefinedValue(tree, "conoscenza Mysql", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(6)
 
     while True:
         value = input("Sai usare MongoDB:\n"
-                      "Risposte possibili: (si) (no)\n").lower()
+                      "Risposte possibili: (si) (no) (dato mancante)\n").lower()
         if value in ["si", "no"]:
             insertDefinedValue(tree, "conoscenza Mongo", value, 1.0)
             break
+        elif value in ["dato mancante"]:
+            info(7)
 
     print("Analisi delle tue risposte...")
     outputPrediction(tree)
@@ -176,4 +192,39 @@ def outputPrediction(tree):
             else:
                 print("Probabilità di assunzione: alta.\nÈ molto probabile che tu sia assunto!\n"
                       "Con queste conoscenze ed esperienze essere assunti sarà un gioco da ragazzi!")
+
+
+def info(number):
+    if number == 0:
+        print("Devi inserire il tuo titolo di studio, cioe indicare se sei laureato, diplomato o hai un titolo di studio inferiore\n")
+    elif number == 1:
+        print("Devi indicare se hai avuto in passato altre esperienze lavorative nel campo informatico:"
+              " 'si' se hai gia esperienze lavorative nel mondo informatico, 'no' altrimenti\n")
+    elif number == 2:
+        print("Devi indicare se sei appassionato per tutto cio che riguarda l'informatica: 'si' se sei appassionato, 'no' altrimenti\n")
+    elif number == 3:
+        print("Il backend, denominato anche “lato server”, è la parte del sito web che non puoi vedere e con cui non"
+              " puoi interagire. Fondamentalmente, tutto ciò che accade dietro le quinte può essere attribuito allo sviluppo web back-end\n"
+              "Il frontend è la parte del sito web che puoi vedere e con cui puoi interagire direttamente per ricevere"
+              " le funzionalità di backend del sistema. Coinvolge tutto ciò che l’utente può vedere, toccare e sperimentare.\n"
+              "Scegli quello che ti appassiona di piu!\n")
+    elif number == 4:
+        print("Java è un linguaggio di programmazione generico utilizzato per lo sviluppo web. Java è uno dei linguaggi "
+              "di programmazione più popolari in uso, in particolare per le applicazioni web client-server.\n"
+              "Indicare con 'si' se sai usare java, 'no' altrimenti\n")
+    elif number == 5:
+        print("Python è un linguaggio di programmazione orientato agli oggetti noto per la sua chiarezza, "
+              "potenza e flessibilità. Si tratta di un linguaggio interpretato, il che significa che un interprete legge"
+              " ed esegue il codice direttamente, senza compilazione.\n"
+              "Indicare con 'si' se sai usare python, 'no' altrimenti\n")
+    elif number == 6:
+        print("MySQL è un RDBMS (Relational Database Management System) open source disponibile gratuitamente che utilizza Structured Query Language (SQL).\n"
+              "Indicare con 'si' se sai usare MySQL, 'no' altrimenti\n")
+    elif number == 7:
+        print("MongoDB è un database scalabile e ad alte prestazioni progettato per gestire l'archiviazione orientata"
+              " ai documenti. Classificato come noSQL, multipiattaforma, gratuito e open source, MongoDB è stato scritto"
+              " in C++ nel 2007 originariamente come parte principale di un prodotto PaaS (Platform as a Service),"
+              " per poi essere rilasciato come progetto open source nel 2009.\n"
+              "Indicare con 'si' se sai usare mongoDB, 'no' altrimenti")
+
 

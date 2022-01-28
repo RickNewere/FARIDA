@@ -50,6 +50,9 @@ def command(input):
         elif commands[0] == 'calcola_salario':
             cl.domanda()
             ut.helpMessage()
+        elif commands[0] == 'accuratezza_classificatore':
+            cl.accuratezza()
+            ut.helpMessage()
         elif commands[0] == 'esci':
             print("A presto!")
             return 0

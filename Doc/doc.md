@@ -76,6 +76,7 @@ Se avviato correttammente da questo momento in poi si potranno utilizzare i segu
 * ```query prop(query)``` - comando utilizzato per esprimere una query alla kb. 
 * ```probabilita_assunzione``` - comando che, in base alle risposte dell'utente, prevede la probabilità che quest'ultimo possa essere assunto.
 * ```calcola_salario``` - comando che, in base all'età, all'esperienza e al sesso prevede il salario annuale che l'utente percepirà.
+* ```accuratezza_classificatore``` - comando che calcola l'accuratezza del classificatore con il metodo 'leave-one-out'
 * ```esci``` - comando per terminare l'applicazione.
 
 Una volta terminato correttamente il programma, verrà visualizzato a linea di comando il seguente messaggio:
@@ -185,6 +186,46 @@ Ogni risposta è pesata differentemente e queste percentuali sono determinate da
 * **Valore Lavorativo**: padre di ```Conoscenza Linguaggi``` e di ```Conoscenza DB```;
 * **Previsione Assunzione**: padre di ```Punteggio Personale``` e di ```Valore Lavorativo```;
 
+
+**ESEMPI RETE BAYESIANA**:
+---
+* P(titoloStudio = laurea) = 0.70;                 
+* P(titoloStudio = diploma) = 0.25;
+* P(titoloStudio = titolo inferiore) = 0.05.
+
+* P(esperienzaPregressa = si) = 0.85
+* P(esperienzaPregressa = no) = 0.15
+
+
+* P(ValorePersonale=ottimo | titoloStudio = laurea ∧ esperienzaPregressa= si) = 0.98
+* P(ValorePersonale=scarso | titoloStudio = laurea ∧ esperienzaPregressa= si) = 0.02
+* P(ValorePersonale=ottimo | titoloStudio = laurea ∧ esperienzaPregressa= no) = 0.75
+* P(ValorePersonale=scarso | titoloStudio = laurea ∧ esperienzaPregressa= no) = 0.25
+* P(ValorePersonale=ottimo | titoloStudio = diploma ∧ esperienzaPregressa= si) = 0.6
+* P(ValorePersonale=scarso | titoloStudio = diploma ∧ esperienzaPregressa= si) = 0.4
+* P(ValorePersonale=ottimo | titoloStudio = diploma ∧ esperienzaPregressa= no) = 0.51
+* P(ValorePersonale=scarso | titoloStudio = diploma ∧ esperienzaPregressa= no) = 0.49
+* P(ValorePersonale=ottimo | titoloStudio = titolo inferiore ∧ esperienzaPregressa= si) = 0.15
+* P(ValorePersonale=scarso | titoloStudio = titolo inferiore ∧ esperienzaPregressa= si) = 0.85
+* P(ValorePersonale=ottimo | titoloStudio = titolo inferiore ∧ esperienzaPregressa= no) = 0.05
+* P(ValorePersonale=scarso | titoloStudio = titolo inferiore ∧ esperienzaPregressa= no) = 0.95
+
+
+* P(passioneInformatica = si) = 0.85
+* P(passioneInformatica = no) = 0.15
+
+* P(sviluppoWeb = back end) = 0.71
+* P(sviluppoWeb = front end) = 0.29
+
+
+* P(ValoreInformatico = ottimo | passioneInformatica = si ∧ sviluppoWeb = back end) = 0.8
+* P(ValoreInformatico = scarso | passioneInformatica = si ∧ sviluppoWeb = back end) = 0.2
+* P(ValoreInformatico = ottimo | passioneInformatica = si ∧ sviluppoWeb = front end) = 0.73
+* P(ValoreInformatico = scarso | passioneInformatica = si ∧ sviluppoWeb = front end) = 0.27
+* P(ValoreInformatico = ottimo | passioneInformatica = no ∧ sviluppoWeb = back end) = 0.33
+* P(ValoreInformatico = scarso | passioneInformatica = no ∧ sviluppoWeb = back end) = 0.67
+* P(ValoreInformatico = ottimo | passioneInformatica = no ∧ sviluppoWeb = front end) = 0.02
+* P(ValoreInformatico = scarso | passioneInformatica = no ∧ sviluppoWeb = front end) = 0.98
 
 [Torna all'inizio](#Indice)
 

@@ -93,7 +93,7 @@ Sono, inoltre, gestiti tutti i casi in cui l'utente inserisce qualcosa di divers
 
 Esempio di linea di comando: 
 
-<center><img src = "photo/example3.png"></center>
+<center><img src = "photo/esempio.PNG"></center>
 
 [Torna all'inizio](#Indice)
 
@@ -103,7 +103,7 @@ Nel nostro applicativo software si è scelto di utilizzare:
 
 * Una [base di conoscenza](https://it.wikipedia.org/wiki/Base_di_conoscenza), ordinata secondo la rappresentazione Individuo-Proprietà-Valore, scritta interamente dal gruppo, che verrà interrogata tramite query. Queste 
 verranno utilizzate all'interno di metodi specifici. Si è scelta la sopraccitata rappresentazione poichè è stata ritenuta la più human readable e la più ordinata secondo il nostro punto di vista.
-* Un [classificatore](https://it.wikipedia.org/wiki/Classificazione) in grado di restituire la classe salariale dell'utente in base alle informazioni che fornirà.
+* Un [classificatore](https://it.wikipedia.org/wiki/Classificazione) in grado di restituire la classe salariale dell'utente in base alle informazioni che fornirà. Inoltre abbiamo utilizzato l'algoritmo Leave-one-out cross validation per calcolare l'accuratezza del classificatore.
 * Una [rete bayesiana](https://it.wikipedia.org/wiki/Rete_bayesiana) in grado di predire la probabilità con cui l'utente che esegue il programma possa essere assunto
 nell'azienda in base alle proprie competenze scientifiche. Si è scelto di utilizzare la rete bayesiana poichè ci può essere incertezza data da alcuni fattori, così da avere una stima 
 generale.
@@ -158,6 +158,8 @@ Il risultato della funzione ```calcola_salario``` sarà un range di salario a cu
 * ```50000-60000€```;
 * ```60000-70000€```.
 
+Inoltre con il comando ```accuratezza_classificatore``` sarà restituita l'accuratezza del classificatore, calcolata con
+l'algoritmo 'leave-one-out cross validation'. Questo algoritmo è stato utilizzato perche il dataset essendo stato scritto da noi, ha pochi esempi, quindi per valutare un dataset con pochi elementi è opportuno utilizzare questo algoritmo.
 ### **Rete Bayesiana**
 
 Nel nostro applicativo è stata implementata una funzione che sfrutta una Rete Bayesiana. Questa è in grado di predire la percentuale di possibilità di assunzione dell'utente nell'azienda. L'assistente, infatti, ponendo delle domande 

@@ -252,23 +252,6 @@ In futuro, alcune feature che potrebbero essere implementate sono:
 
 Il progetto è stato sviluppato a partire da Dicembre 2021 fino a metà Gennaio 2022 completamente in remoto.
 
-## **Piattaforme di comunicazione**
-
-Per la comunicazione, il nostro gruppo, ha adottato due piattaforme:
-
-* **[Microsoft Teams](https://discord.com/brand-new)**
-* **[Whatsapp](https://www.whatsapp.com/?lang=it)**
-
-La prima è stata scelta poichè una piattaforma a tutti i membri del gruppo familiare, la quale permetteva di organizzare videoconferenze e di condividere lo schermo. Ciò è stato molto utile nel momento in cui sorgevano difficoltà in quanto si poteva risolvere il problema tutti insieme.
-
-<center><img src = "../Doc/photo/teams.png"></center>
-
-La seconda è stata scelta poichè, essendo anche questa familiare, era il mezzo di comunicazione più immediata. Tramite questa piattaforma, è stato possibile confrontarsi durante lo sviluppo, decidere i giorni e gli orari per i nostri meeting e tenersi contatto.
-
-<center><img src = "../Doc/photo/whatsappIcon.png"></center>
-
-[Torna all'inizio](#Indice)
-
 ## **Conclusioni**
 
 Come detto in precedenza, riteniamo che questo progetto sia stato un importante banco di prova. Nonostante le difficoltà siamo riusciti comunque a centrare gli obiettivi stabiliti e a trarre il meglio da questa esperienza formativa.

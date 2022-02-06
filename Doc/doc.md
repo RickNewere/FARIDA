@@ -188,6 +188,9 @@ Ogni risposta è pesata differentemente e queste percentuali sono determinate da
 * **Valore Lavorativo**: padre di ```Conoscenza Linguaggi``` e di ```Conoscenza DB```;
 * **Previsione Assunzione**: padre di ```Punteggio Personale``` e di ```Valore Lavorativo```;
 
+**RETE BAYESIANA**:
+---
+<center><img src = "../Doc/photo/Rete Bayesiana.png"></center>
 
 **ESEMPI RETE BAYESIANA**:
 ---
